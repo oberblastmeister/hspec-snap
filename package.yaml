@@ -51,7 +51,7 @@ library:
   source-dirs: src
 
 executables:
-  hspec-snap-exe:
+  hsnap:
     main: Main.hs
     source-dirs: app
     ghc-options:

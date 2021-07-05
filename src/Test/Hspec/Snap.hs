@@ -131,7 +131,7 @@ evaluateSnap snapshot = do
           throwError MismatchedOutput
         else return SameOutput
 
-snap :: [Char] -> String -> SpecWith ()
+snap :: FilePath -> String -> SpecWith ()
 snap s showable =
   it ("should work for snapshot path: " ++ s) $
     defaultSnapshot
