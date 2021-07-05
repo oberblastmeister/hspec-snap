@@ -1,5 +1,7 @@
 # hspec-snap
 
+**note**: this is still alpha quality software!
+
 Snapshot tests assert values against a reference (the snapshot). This is useful when your reference values are very large or change often. Snapshot tests are also called golden tests or approval tests.
 
 ## Quick Start
