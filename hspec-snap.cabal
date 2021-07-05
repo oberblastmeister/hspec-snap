@@ -1,0 +1,124 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hspec-snap
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hspec-snap#readme>
+homepage:       https://github.com/githubuser/hspec-snap#readme
+bug-reports:    https://github.com/githubuser/hspec-snap/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hspec-snap
+
+library
+  exposed-modules:
+      Test.Hspec.Snap
+  other-modules:
+      Paths_hspec_snap
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+      BlockArguments
+      LambdaCase
+      TypeFamilies
+      FlexibleInstances
+      FlexibleContexts
+      OverloadedStrings
+      QuasiQuotes
+      NamedFieldPuns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , hspec
+    , hspec-core
+    , mtl
+    , path
+    , path-io
+    , text
+  default-language: Haskell2010
+
+executable hspec-snap-exe
+  main-is: Main.hs
+  other-modules:
+      Opts
+      Run.Accept
+      Run.Diff
+      Run.Reject
+      Run.Review
+      Run.Test
+      Util
+      Paths_hspec_snap
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      BlockArguments
+      LambdaCase
+      TypeFamilies
+      FlexibleInstances
+      FlexibleContexts
+      OverloadedStrings
+      QuasiQuotes
+      NamedFieldPuns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , exceptions
+    , haskeline
+    , hspec
+    , hspec-core
+    , hspec-snap
+    , mtl
+    , optparse-applicative
+    , path
+    , path-io
+    , text
+    , typed-process
+  default-language: Haskell2010
+
+test-suite hspec-snap-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      PathSpec
+      Paths_hspec_snap
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+      BlockArguments
+      LambdaCase
+      TypeFamilies
+      FlexibleInstances
+      FlexibleContexts
+      OverloadedStrings
+      QuasiQuotes
+      NamedFieldPuns
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , hspec
+    , hspec-core
+    , hspec-snap
+    , mtl
+    , path
+    , path-io
+    , text
+  default-language: Haskell2010
